@@ -1,0 +1,38 @@
+/* #first-pi {
+  background-color: blue;
+  text-decoration: underline;
+  border-style: double;
+  border-width: 10px;
+} */
+
+.first-pc {
+  background-color: yellow;
+}
+p.second-pc {
+  background-color: blue;
+}
+.card {
+  width: 200px;
+  height: 200px;
+  border: 1px solid red;
+  margin: 10px;
+  padding: 10px;
+}
+div div p a {
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  height: 4rem;
+}
+
+.brown-class {
+  background-color: brown;
+}
+
+input[type="email"] {
+  border: 4px dotted black;
+}
+p {
+  background-color: red;
+  color: white;
+}
