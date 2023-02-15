@@ -4,9 +4,54 @@
   box-sizing: border-box;
 }
 
-.box {
-  height: 40px;
-  width: 40px;
-  background-color: blue;
-  color: white;
+.title {
+  font-size: 3rem;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: blueviolet;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  height: 20vh;
+}
+
+nav {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+nav ul {
+  list-style: none;
+}
+nav li {
+  margin-bottom: 0.2rem;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+section {
+  padding: 0.5rem;
+}
+
+@media screen and (min-width: 400px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1rem;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 1rem;
+  }
 }
