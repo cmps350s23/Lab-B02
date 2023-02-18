@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 80%;
+  margin: auto;
+}
+.main-title {
+  text-align: center;
+  margin: 1rem;
+}
+form {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+fieldset {
+  border: 1px solid gray;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+legend {
+  font-size: 20px;
+  font-weight: bold;
+  color: blue;
+  padding: ;
+}
+input,
+select,
+textarea {
+  width: 97%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+div.gender {
+  width: 100%;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  width: fit-content;
+}
+
+input[type="submit"] {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.form-group {
+  font-weight: bold;
+}
+@media (min-width: 600px) {
+  .form-group {
+    display: flex;
+  }
+  .form-group label {
+    flex-basis: 35%;
+    text-align: right;
+    align-self: center;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    /* flex-shrink: 0; */
+  }
+}

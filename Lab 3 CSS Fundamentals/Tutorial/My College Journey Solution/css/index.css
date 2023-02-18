@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  width: 90%;
+  margin: auto;
+  font-size: clamp(0.625rem, 1rem + 1vw, 2rem);
+}
+
+#qu-logo {
+  width: 100px;
+  height: 80px;
+  align-self: center;
+}
+
+nav ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-right: 2rem;
+  list-style: none;
+  letter-spacing: 1px;
+  font-size: 12px;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  color: brown;
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-title {
+  width: 100%;
+  text-align: center;
+  font-size: clamp(1.5rem, 3.5vw, 3rem);
+  letter-spacing: 2px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.headline img {
+  width: 200px;
+  height: 30vh;
+  align-self: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  background-position: top;
+}
+
+h1 span {
+  color: rgb(88, 100, 163);
+  font-size: 1.5rem;
+}
+
+section h2 {
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+.abroad-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+main img {
+  width: clamp(200px, 100%, 400px);
+  height: auto;
+
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 4px;
+  margin-bottom: 10px;
+}
+
+section {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 1rem;
+}
+
+section ol {
+  margin-left: 1.2rem;
+}
+
+section p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+p::first-letter {
+  font-size: 1.5rem;
+}
+
+aside {
+  margin-top: 4rem;
+  min-width: fit-content;
+}
+
+aside ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 10px;
+}
+
+aside a {
+  text-decoration: none;
+}
+
+aside a:hover {
+  text-decoration: underline;
+  color: brown;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td,
+th {
+  padding: 5px;
+}
+
+.table-title {
+  background-color: brown;
+  color: white;
+}
+
+table th {
+  text-align: center;
+}
+
+td,
+th {
+  border-width: 2px;
+  border-style: solid;
+  border-color: red;
+}
+
+footer {
+  height: 50px;
+  background-color: rgb(231, 20, 20);
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 2px;
+  box-shadow: rgba(191, 202, 186, 0.2) 0px 8px 24px;
+}
+
+@media (min-width: 40rem) {
+  header,
+  .headline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+
+  nav ul {
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+  }
+  nav li:not(:last-child) ::after {
+    content: "|";
+    margin-left: 10px;
+  }
+  /* .middle-section {
+    display: flex;
+    gap: 1rem;
+  } */
+}
