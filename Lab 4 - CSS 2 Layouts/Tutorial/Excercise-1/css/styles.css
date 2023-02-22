@@ -42,7 +42,78 @@ nav li {
 }
 nav a {
   text-decoration: none;
+  transition: 0.2s;
+}
+nav a:hover {
+  text-decoration: underline;
+  color: green;
 }
 main {
-  background-image: ;
+  background: url("../img/bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-img {
+  height: 50%;
+}
+
+.btn-buy {
+  padding: 0.5rem;
+  background-color: orange;
+  color: blue;
+  border-radius: 5px;
+  border-style: none;
+  transition: 0.2s;
+}
+
+.btn-buy:hover {
+  background-color: green;
+  color: white;
+}
+footer {
+  padding: 0.5rem;
+  background-color: orange;
+  text-align: center;
+}
+
+@media screen and (min-width: 30rem) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto 1fr auto;
+    /* outline: 1px solid red; */
+    height: 100vh;
+  }
+  nav {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  main {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    background-color: red;
+    height: 100%;
+  }
+  footer {
+    grid-column: span 2;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  header {
+    border-bottom: none;
+    border-right: 1px solid red;
+  }
+  nav {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
 }
