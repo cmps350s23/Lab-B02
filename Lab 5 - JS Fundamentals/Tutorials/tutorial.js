@@ -51,9 +51,24 @@ numbers[0] = 1000;
 console.log(numbers);
 */
 
-const numbers = [1, 2, 3, [[4], 5], 6];
-
+const flatNum = [1, [2, 3], 4, 5];
+const numbers = [1, 2, 3, 4, 5];
+console.log("BEFORE FLAT", flatNum);
+console.log("FLAT", flatNum.flat(Infinity));
 // ADD
-numbers.push(100);
 
-console.log("PUSH", ...numbers.flat(Infinity));
+console.log("\nORIGINAL", numbers);
+
+numbers.push(100);
+console.log("\nPUSH", numbers);
+
+numbers.pop();
+console.log("\nPOP", numbers);
+
+const sliced = numbers.slice(2, 4);
+console.log("\nSLICE", sliced);
+console.log("\nORIGINAL NOT AFFECTED [SLICE]", numbers);
+
+const spliced = numbers.splice(2, 1, 55, 66, 88, 99);
+console.log("\nSLICE", spliced);
+console.log("\nORIGINAL AFFECTED [SPLICED]", numbers);
