@@ -134,16 +134,7 @@ const div = function (a, b) {
 calculator(a, 20, add);
 calculator(110, 20, sub);
 calculator(110, 20, div);
-*/
 
-function filterItems(numbers, filter) {
-  const result = [];
-  for (const num of numbers) {
-    if (filter(num)) result.push(num);
-  }
-
-  return result;
-}
 
 // const isEven = function (v) {
 //   return v % 2 == 0;
@@ -160,6 +151,14 @@ function filterItems(numbers, filter) {
 // isEven(10);
 // isEven(a);
 
+function filterItems(numbers, filter) {
+  const result = [];
+  for (const num of numbers) {
+    if (filter(num)) result.push(num);
+  }
+
+  return result;
+}
 const numbers = [1, 2, 3, 4, -4, -5, 3, 0];
 console.log(filterItems(numbers, (v) => v % 2 == 0));
 console.log(filterItems(numbers, (v) => v % 2 != 0));
@@ -175,3 +174,26 @@ function add(x, y) {
 const square2 = (x) => x ** 2;
 
 console.log(square2(22));
+*/
+
+const numbers = [1, 2, 3, -4, -5, -6, 1, -5];
+
+numbers.forEach((d) => console.log("=> ", d));
+const squaredNumbers = numbers.map((x) => x ** 3);
+const negNumbers = numbers.filter((x) => x < 0);
+const foundNumber = numbers.find((x) => x == -5);
+const foundIndex = numbers.findIndex((x) => x == 1);
+const sum = [1, 2, 3, 4].reduce((a, b) => a * b, 1);
+const max = [1, 2, 3, 4].reduce((a, b) => (a > b ? a : b));
+
+console.log(squaredNumbers);
+console.log(numbers);
+console.log(negNumbers);
+console.log(foundNumber);
+console.log(foundIndex);
+
+console.log(numbers[foundIndex]);
+numbers.splice(foundIndex, 1);
+console.log(numbers);
+console.log(sum);
+console.log(max);
