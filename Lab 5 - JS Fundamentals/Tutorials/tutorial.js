@@ -113,6 +113,65 @@ console.log(add2(a, 20));
 console.log("\nAfter calling the addAndDisplay");
 addAndDisplay(a, 20, display);
 addAndDisplay(a, 20, display2);
+
+
+function calculator(a, b, opt) {
+  const result = opt(a, b);
+  console.log(result);
+}
+
+const add = function (a, b) {
+  return a + b;
+};
+
+const sub = function (a, b) {
+  return a - b;
+};
+
+const div = function (a, b) {
+  return a / b;
+};
+calculator(a, 20, add);
+calculator(110, 20, sub);
+calculator(110, 20, div);
 */
 
-function calculator ()
+function filterItems(numbers, filter) {
+  const result = [];
+  for (const num of numbers) {
+    if (filter(num)) result.push(num);
+  }
+
+  return result;
+}
+
+// const isEven = function (v) {
+//   return v % 2 == 0;
+// };
+// const isOdd = function (v) {
+//   return v % 2 != 0;
+// };
+
+// const isNeg = function (v) {
+//   return v < 0;
+// };
+
+// a = 10;
+// isEven(10);
+// isEven(a);
+
+const numbers = [1, 2, 3, 4, -4, -5, 3, 0];
+console.log(filterItems(numbers, (v) => v % 2 == 0));
+console.log(filterItems(numbers, (v) => v % 2 != 0));
+console.log(filterItems(numbers, (v) => v < 0));
+
+function square(x) {
+  return x ** 2;
+}
+function add(x, y) {
+  return x + y;
+}
+//Arrow
+const square2 = (x) => x ** 2;
+
+console.log(square2(22));
