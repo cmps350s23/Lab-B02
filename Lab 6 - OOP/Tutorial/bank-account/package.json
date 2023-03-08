@@ -4,9 +4,13 @@
   "description": "This is a project about banking app that uses object literals",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha **/*.spec.js"
   },
   "type": "module",
   "author": "abdulahi",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  }
 }
