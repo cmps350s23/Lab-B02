@@ -1,0 +1,12 @@
+{
+  "name": "bank-account",
+  "version": "1.0.0",
+  "description": "This is a project about banking app that uses object literals",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "abdulahi",
+  "license": "ISC"
+}
