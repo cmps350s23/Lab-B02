@@ -184,7 +184,7 @@ const negNumbers = numbers.filter((x) => x < 0);
 const foundNumber = numbers.find((x) => x == -5);
 const foundIndex = numbers.findIndex((x) => x == 1);
 const sum = [1, 2, 3, 4].reduce((a, b) => a * b, 1);
-const max = [1, 2, 3, 4].reduce((a, b) => (a > b ? a : b));
+const max = [-1, 26, 88, 14].reduce((acc, curr) => (acc > curr ? acc : curr));
 
 console.log(squaredNumbers);
 console.log(numbers);
@@ -197,3 +197,8 @@ numbers.splice(foundIndex, 1);
 console.log(numbers);
 console.log(sum);
 console.log(max);
+
+mul = num[0];
+for (const n of numbers) {
+  mul *= n;
+}
