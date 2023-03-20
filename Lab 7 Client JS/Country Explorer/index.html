@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h2>Country Explorer</h2>
+        </header>
+        <hr>
+        <br>
+        <main id="main-content">
+            <form action="#">
+                <div class="form-group">
+                    <label>Select a region &nbsp;</label>
+                    <input type="text" id="region" name="region" placeholder="Select a region" list="regions">
+
+                    <datalist id="regions" name="regions">
+                        <option value="Africa"></option>
+                        <option value="Asia"></option>
+                        <option value="Europe"></option>
+                        <option value="North America"></option>
+                        <option value="South America"></option>
+                    </datalist>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label>Select a country</label>
+                    <select name="country" id="country" aria-placeholder="Hello">
+                        <option value="" selected disabled>Select Country</option>
+                    </select>
+                </div>
+            </form>
+            <br>
+            <div id="facts-area">
+                <!-- Load the facts' table here-->
+            </div>
+        </main>
+    </div>
+    <!-- Add the script here -->
+</body>
+
+</html>
