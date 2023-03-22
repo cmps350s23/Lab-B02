@@ -9,9 +9,17 @@ const countryURL = 'https://restcountries.com/v3.1/name/'
 
 // create a function that download the content from the given APIs
 
-function handleRegionChange() {
+async function handleRegionChange() {
     const url = `${regionURL}${regionDL.value}`
-    const data = fetch(url)
+    const data = await fetch(url)
+    const countries = await data.json()
+
+    const options = countries.map(country => ` 
+        <option value="${country.name.common}" > 
+                ${country.name.common} 
+        </option>
+    `)
+    countryDD.innerHTML = options
 
 }
 
