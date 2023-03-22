@@ -23,3 +23,20 @@ async function handleRegionChange() {
 
 }
 
+async function handleCountryChange() {
+    // concatinate country url with the selected country
+    //get the data using the new url
+    //parse it
+    //console.log
+    const url = `${countryURL}${countryDD.value}`
+    const data = await fetch(url)
+    const countries = await data.json()
+    const factsHTML = changeCountryToFacts(countries[0])
+    factsArea.innerHTML = factsHTML
+}
+
+function changeCountryToFacts(country) {
+    return `
+        <h2> Facts About ${country.name.common} </h2>
+    `
+}
