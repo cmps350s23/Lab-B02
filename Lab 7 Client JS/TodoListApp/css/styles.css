@@ -1,5 +1,5 @@
 
-.todo-box {
+.todo-form {
     background: #dfe8ec;
     width: 400px;
     margin: auto;
@@ -29,7 +29,10 @@ a{
     transform: scale(2);
     margin: 10px;
 }
-
+.submit-btn{
+    border-style: none;
+    background-color: white;
+}
 .fa-plus {
     color: white;
     background-color: #6475ee;
