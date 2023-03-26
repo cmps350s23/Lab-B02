@@ -50,7 +50,6 @@ function todoToHTML(todo) {
 }
 
 function changeTodoStatus(todoId) {
-
     const index = todos.findIndex(todo => todo.id == todoId)
     todos[index].completed = !todos[index].completed
     localStorage.todos = JSON.stringify(todos)
