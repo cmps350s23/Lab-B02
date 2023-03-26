@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .recipes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+            grid-gap: 1rem;
+            margin: 1rem;
+        }
+
+        .recipe-card {
+            overflow: hidden;
+            width: 420px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 10px;
+            padding: 1rem;
+
+        }
+
+        .card-img {
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+        }
+
+        .instructions {
+            text-transform: none;
+            letter-spacing: 0;
+            margin-bottom: 17px;
+            font-size: .7em;
+            line-height: 1.6em;
+            margin-right: 25px;
+            text-align: justify;
+        }
+
+        .action-btns {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            margin-right: 25px;
+
+        }
+
+        .action-btns button {
+            padding: 10px;
+            outline: 0;
+            border: 0;
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        .btn-update {
+            background-color: #f0ad4e;
+            color: #fff;
+        }
+
+        .btn-delete {
+            background-color: #d9534f;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="recipes">
+        <div class="recipe-card">
+            <img src="https://www.themealdb.com/images/media/meals/wyrqqq1468233628.jpg" class="card-img" />
+            <div class="description">
+                <h1>Pasta Dish</h1>
+                <h2>Instructions</h2>
+                <p class="instructions">Grease a 1 litre/2 pint pie dish with butter.\r\nCut the crusts off the
+                    bread.
+                    Spread each slice with on one side with butter, then cut into triangles.\r\nArrange a layer
+                    of
+                    bread,
+                    buttered-side up, in the bottom of the dish, then add a layer of sultanas. Sprinkle with a
+                    little
+                    cinnamon, then repeat the layers of bread and sultanas, sprinkling with cinnamon, until you
+                    have
+                    used up
+                    all of the bread. Finish with a layer of bread, then set aside.\r\nGently warm the milk and
+                    cream in
+                    a
+                    pan over a low heat to scalding point. Don't let it boil.\r\nCrack the eggs into a bowl, add
+                    three
+                    quarters of the sugar and lightly whisk until pale.\r\nAdd the warm milk and cream mixture
+                    and stir
+                    well, then strain the custard into a bowl.\r\nPour the custard over the prepared bread
+                    layers and
+                    sprinkle with nutmeg and the remaining sugar and leave to stand for 30 minutes.\r\nPreheat
+                    the oven
+                    to
+                    180C/355F/Gas 4.\r\nPlace the dish into the oven and bake for 30-40 minutes, or until the
+                    custard
+                    has
+                    set and the top is golden-brown.</p>
+            </div>
+            <div class="action-btns">
+                <button class="btn-update"> <i class="fa fa-pencil">Update</i></button>
+                <button class="btn-delete"> <i class="fa fa-trash"> Delete </i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- font-awesome icons -->
+
+</body>
+
+</html>
