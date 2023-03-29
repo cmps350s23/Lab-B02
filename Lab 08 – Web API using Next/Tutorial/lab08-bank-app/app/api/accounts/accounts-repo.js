@@ -40,7 +40,10 @@ export default class AccountsRepo {
     async getAccount(accNo) {
         const accounts = await fs.readJson(this.path)
         const account = accounts.find(acc => acc.accountNo == accNo)
-        return account
+        if (account)
+            return account
+        else
+            return { errorMessage: 'Account does not exit' }
     }
 
     async deleteAccount(accNo) {
