@@ -9,3 +9,10 @@ export async function GET(request) {
 
     return Response.json(accounts)
 }
+
+export async function POST(request) {
+    const account = await request.json()
+    const newAccount = await repo.addAccount(account)
+    return Response.json(newAccount)
+
+}
