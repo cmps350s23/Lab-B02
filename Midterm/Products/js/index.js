@@ -36,6 +36,3 @@ function formToObject(form) {
     return data;
 }
 
-function updateProduct(e) {
-
-}
