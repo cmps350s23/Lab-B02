@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    width: 100%;
+    padding: 0 50px;
+}
+
+/* Add the necessary css to make the card side by side and there should be space between the card and the image */
+.product-info {
+
+    align-items: center;
+    margin: auto;
+    margin-top: 2rem;
+    background: #fff;
+    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s;
+    padding: 1rem;
+}
+
+.product-info:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    flex: 1;
+}
+
+.card-body {
+
+    flex: 4;
+}
+
+
+.card-body p {
+    color: gray;
+    font-size: 1.1em;
+    line-height: 22px;
+    text-align: justify;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+
+}
+
+.btn-primary {
+    font-size: 0.9em;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    margin-top: 2px;
+    background: #0c14ff;
+}
+
+.delete-btn:hover {
+    color: #fddb3a;
+    text-decoration: underline;
+}
+
+/* Navigation */
+
+nav {
+    display: flex;
+    align-items: center;
+
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    color: #fddb3a;
+    margin: 1rem;
+}
+
+.navMenu a {
+    color: #f6f4e6;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    width: 80px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    margin: 1rem;
+}
+
+.navMenu a:hover {
+    color: #fddb3a;
+}
+
+.dark-line {
+    background-color: #070706;
+    height: 2px;
+    width: 100%;
+    margin: 0.5rem;
+
+}
+
+/* Styles for the form */
+
+.title {
+    flex: 1;
+    text-align: center;
+    font-size: clamp(1.5rem, 10vw, 3rem);
+    font-weight: bold;
+    padding: 20px;
+    color: #676458;
+    font-family: Cursive, 'Times New Roman', Times, serif;
+
+}
+
+.form-title {
+    flex: 1;
+    text-align: center;
+    font-size: clamp(1.5rem, 10vw, 3rem);
+    font-weight: bold;
+    padding: 20px;
+    color: #676458;
+
+}
+
+input[type=text],
+input[type=url],
+input[type=number],
+input[type=search],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin: 0.5rem 0;
+}
+
+.filter {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+label {
+    /* padding: 12px 12px 12px 0; */
+    display: inline-block;
+    font-weight: bold;
+    color: black;
+}
+
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Add media query to handle the navigation menu */
+@media screen and (max-width: 600px) {
+
+    .product-info {
+        flex-direction: column;
+    }
+
+    .card-image img {
+        height: 100%;
+        width: 100%;
+
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    nav div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+    }
+}
