@@ -1,10 +1,11 @@
 const baseUrl = '/api/accounts'
 
-class AccountRepo {
+class AccountService {
     //returns all the accounts depending on the type the user selected
     async getAccounts(acctType) {
-        const response = await fetch(`https://localhost:3000/api/accounts?type=${acctType}`)
-        return await response.json()
+        const data = await fetch(`${baseUrl}?type=${acctType}`)
+
+        const accounts = await data.json()
     }
 
     async deleteAccount(accountNo) {
@@ -24,4 +25,4 @@ class AccountRepo {
     }
 }
 
-export default new AccountRepo()
+export default new AccountService()
