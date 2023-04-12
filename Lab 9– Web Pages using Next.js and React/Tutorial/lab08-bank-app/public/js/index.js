@@ -1,5 +1,5 @@
 //After the document is loaded in the browser
-import accountRepo from './repository/account-repo.js'
+import accountRepo from './service/account-service.js'
 
 document.addEventListener("DOMContentLoaded", async () => {
     window.handleLoadAccounts = handleLoadAccounts
@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 async function handleLoadAccounts(acctType) {
     try {
-        const accounts = await accountRepo.getAccounts(acctType)
+        // const accounts = await accountRepo.getAccounts(acctType)
+
         document.querySelector('#accounts-table').innerHTML =
             `<table id="accounts">
                 <tr>
