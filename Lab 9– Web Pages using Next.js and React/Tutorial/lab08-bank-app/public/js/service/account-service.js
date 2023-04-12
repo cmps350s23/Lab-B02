@@ -27,10 +27,25 @@ class AccountService {
 
     async updateAccount(account) {
 
+        const response = await fetch(`${baseUrl}/${account.accountNo}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(account)
+        })
+        return await response.json()
     }
 
     async addTrans(trans) {
-
+        const response = await fetch(`${baseUrl}/${trans.accountNo}/trans`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(trans)
+        })
+        return await response.json()
     }
 }
 

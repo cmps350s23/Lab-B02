@@ -9,6 +9,7 @@ export async function GET(request, { params }) {
 }
 
 export async function PUT(request) {
+    console.log('called PUT');
     const account = await request.json()
     const updatedAccount = await repo.updateAccount(account)
     return Response.json(updatedAccount)

@@ -1,4 +1,5 @@
 import './globals.css'
+import Link from 'next/link'
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,6 +13,14 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" />
       </head>
       <body>
+        <nav>
+          <ul>
+            <li>Alpha Bank</li>
+            <li><Link href="/">Home</Link> </li>
+            <li><Link href="/accounts/add">Add Account</Link></li>
+            <li><Link href="/accounts/trans">Add Transaction</Link></li>
+          </ul>
+        </nav>
         {children}
       </body>
     </html>
