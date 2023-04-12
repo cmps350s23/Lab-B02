@@ -1,5 +1,5 @@
 //After the document is loaded in the browser
-import accountRepo from './service/account-service.js'
+import accountService from './service/account-service.js'
 
 document.addEventListener("DOMContentLoaded", async () => {
     window.handleLoadAccounts = handleLoadAccounts
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 async function handleLoadAccounts(acctType) {
     try {
-        // const accounts = await accountRepo.getAccounts(acctType)
+        const accounts = await accountService.getAccounts(acctType)
 
         document.querySelector('#accounts-table').innerHTML =
             `<table id="accounts">
@@ -54,7 +54,7 @@ async function handleDeleteAccount(accountNo) {
     try {
         const confirmed = confirm("Are you sure you want to delete this account?");
         if (confirmed) {
-            await accountRepo.deleteAccount(accountNo)
+            await accountService.deleteAccount(accountNo)
             document.querySelector(`#row-${accountNo}`).remove();
         }
     } catch (e) {
@@ -70,7 +70,7 @@ async function handleAddAccount(e) {
         if (!isFormValid) return;
 
         const account = formToObject(form);
-        await accountRepo.addAccount(account)
+        await accountService.addAccount(account)
         window.location.href = 'index.html'
     } catch (e) {
         console.log(e);
@@ -79,7 +79,7 @@ async function handleAddAccount(e) {
 
 async function fillAccountsDD() {
     try {
-        const accounts = await accountRepo.getAccounts('All');
+        const accounts = await accountService.getAccounts('All');
         document.querySelector('#accountNo').innerHTML +=
             `${accounts.map(account => accountToHtmlOption(account)).join('')}`;
 
@@ -103,7 +103,7 @@ async function handleAddTrans(event) {
         event.preventDefault();
         const trans = formToObject(form);
         console.log(trans)
-        await accountRepo.addTrans(trans);
+        await accountService.addTrans(trans);
         window.location.href = 'index.html'
     } catch (e) {
         console.log(e);
