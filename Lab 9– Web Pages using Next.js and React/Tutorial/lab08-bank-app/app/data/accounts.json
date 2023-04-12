@@ -30,7 +30,7 @@
     },
     {
         "acctType": "Current",
-        "balance": "123",
+        "balance": "0",
         "accountNo": "9mVA"
     },
     {
@@ -45,7 +45,7 @@
     },
     {
         "acctType": "Saving",
-        "balance": "123213",
+        "balance": "0",
         "accountNo": "6-GJ"
     }
 ]
