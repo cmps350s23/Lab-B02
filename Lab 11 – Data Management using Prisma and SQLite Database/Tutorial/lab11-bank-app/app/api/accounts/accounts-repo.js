@@ -37,13 +37,9 @@ export default class AccountsRepo {
         }
     }
 
-    async updateAccount(account, accountNo) {
+    async updateAccount(updatedAccount, accountNo) {
         try {
-            const updatedAccount = await prisma.account.update({
-                where: { accountNo },
-                data: account
-            })
-            return updatedAccount
+            return await prisma.account.update({ data: updatedAccount, where: { accountNo } })
         } catch (err) {
             return { error: err.message }
         }
@@ -51,7 +47,7 @@ export default class AccountsRepo {
 
     async getAccount(accNo) {
         try {
-
+            return await prisma.account.findUnique({ where: { accountNo: accNo } })
         } catch (err) {
             return { error: err.message }
         }
@@ -59,8 +55,11 @@ export default class AccountsRepo {
 
     async deleteAccount(accNo) {
         try {
+            const count = await prisma.account.delete({ where: { accountNo: accNo } })
+            if (count == 0)
+                return "account does not exist"
 
-            return "deleted successfully"
+            return "account deleted successfully"
         } catch (err) {
             console.log(err);
             return "Unable to delete account because it does not exist"
@@ -69,9 +68,23 @@ export default class AccountsRepo {
     }
 
     async addTransaction(transaction, accountNo) {
-
         try {
+            transaction.amount = parseFloat(transaction.amount)
 
+            const account = await this.getAccount(accountNo)
+            if (account.error || account == null)
+                return { error: "account does not exist" }
+
+            if (transaction.transType == 'Deposit')
+                account.balance += transaction.amount
+            else
+                if (account.balance >= transaction.amount)
+                    account.balance -= transaction.amount
+                else
+                    return { error: "insufficient fund" }
+
+            await this.updateAccount(account, accountNo)
+            return await prisma.transaction.create({ data: transaction })
 
         } catch (err) {
             return {
