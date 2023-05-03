@@ -39,7 +39,11 @@ export default class AccountsRepo {
 
     async updateAccount(account, accountNo) {
         try {
-
+            const updatedAccount = await prisma.account.update({
+                where: { accountNo },
+                data: account
+            })
+            return updatedAccount
         } catch (err) {
             return { error: err.message }
         }
