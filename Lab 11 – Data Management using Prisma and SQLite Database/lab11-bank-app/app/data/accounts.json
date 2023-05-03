@@ -1,0 +1,44 @@
+[
+    {
+        "accountNo": "2004",
+        "acctType": "Saving",
+        "balance": 700,
+        "minimumBalance": "1000"
+    },
+    {
+        "accountNo": "4444",
+        "acctType": "Current",
+        "balance": 443123,
+        "minimumBalance": "1000"
+    },
+    {
+        "acctType": "Current",
+        "balance": "135135",
+        "accountNo": "v6lY"
+    },
+    {
+        "acctType": "Current",
+        "balance": 12321,
+        "accountNo": "2C2N"
+    },
+    {
+        "acctType": "Current",
+        "balance": 123123,
+        "accountNo": "5a51"
+    },
+    {
+        "acctType": "Current",
+        "balance": 333333,
+        "accountNo": "9CK8"
+    },
+    {
+        "acctType": "Current",
+        "balance": 32432,
+        "accountNo": "xZUR"
+    },
+    {
+        "acctType": "Saving",
+        "balance": 0,
+        "accountNo": "Bc3N"
+    }
+]
