@@ -15,10 +15,11 @@ model Account {
 }
 
 model Transaction {
-  transId       Int      @id @default(autoincrement())
-  transType     String
-  amount        Float
-  date          DateTime @default(now())
-  userAccountNo String
-  Account       Account  @relation(fields: [userAccountNo], references: [accountNo])
+  transId   Int      @id @default(autoincrement())
+  transType String
+  amount    Float
+  date      DateTime @default(now())
+
+  Account   Account @relation(fields: [accountNo], references: [accountNo])
+  accountNo String
 }

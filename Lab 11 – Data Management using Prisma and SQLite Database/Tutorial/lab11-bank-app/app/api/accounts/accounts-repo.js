@@ -87,6 +87,7 @@ export default class AccountsRepo {
             return await prisma.transaction.create({ data: transaction })
 
         } catch (err) {
+            console.log(err);
             return {
                 issue: 'unable to execute the transaction successful',
                 reason: err.message
