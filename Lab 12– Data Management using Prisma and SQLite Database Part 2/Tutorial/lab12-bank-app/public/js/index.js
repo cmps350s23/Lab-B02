@@ -12,14 +12,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 //returns all the accounts depending on the type the user selected
 
-async function handleLoadAccounts(acctType) {
+async fu/th>nction handleLoadAccounts(acctType) {
     try {
         const accounts = await accountRepo.getAccounts(acctType);
         document.querySelector('#accounts-table').innerHTML =
             `<table id="accounts">
                 <tr>
                     <th>Account No</th>
-                    <th>Account Type</th>
+                    <th>Account Type<
                     <th>Balance</th>
                     <th>Action</th>
                 </tr>
