@@ -18,9 +18,12 @@ export default class AccountsRepo {
                 All the test will go here
                 await this.getOwners()
                 this.deleteOwners('dfghfrjki756gh')
+                this.searchOwner('John')
             */
 
-            this.searchOwner('John')
+
+
+            this.getTrans('rsfrg2fprksfrg2fpt', '2021-08-16T10:00:00.000Z', '2022-08-16T10:00:00.000Z')
 
             let accounts = []
             if (type == 'Savings' || type == 'Current') {
@@ -193,7 +196,19 @@ export default class AccountsRepo {
 
     async getTrans(accountNo, fromDate, toDate) {
         try {
+            const transactions = await prisma.transaction.findMany({
+                where: {
+                    accountNo,
+                    date: {
+                        gte: new Date(fromDate).toISOString(),
+                        lte: new Date(toDate).toISOString()
+                    }
+                }
+            })
 
+            console.log(transactions);
+            // 
+            return transactions
         } catch (error) {
             console.log(error);
             return { error: error.message }
