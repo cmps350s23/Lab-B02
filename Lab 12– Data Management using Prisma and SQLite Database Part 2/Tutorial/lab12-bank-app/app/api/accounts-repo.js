@@ -19,11 +19,12 @@ export default class AccountsRepo {
                 await this.getOwners()
                 this.deleteOwners('dfghfrjki756gh')
                 this.searchOwner('John')
+                 this.getTrans('rsfrg2fprksfrg2fpt', '2021-08-16T10:00:00.000Z', '2022-08-16T10:00:00.000Z')
             */
 
+            this.getAvgBalance()
 
 
-            this.getTrans('rsfrg2fprksfrg2fpt', '2021-08-16T10:00:00.000Z', '2022-08-16T10:00:00.000Z')
 
             let accounts = []
             if (type == 'Savings' || type == 'Current') {
@@ -234,6 +235,14 @@ export default class AccountsRepo {
     }
     async getAvgBalance() {
         try {
+            const avgBalance = await prisma.account.groupBy({
+                by: ['acctType'],
+                _avg: { balance: true },
+                _count: { accountNo: true }
+
+            })
+            console.log(avgBalance);
+            return avgBalance
 
         } catch (error) {
             console.log(error);
