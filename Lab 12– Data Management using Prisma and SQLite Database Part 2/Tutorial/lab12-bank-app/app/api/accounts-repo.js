@@ -14,7 +14,14 @@ export default class AccountsRepo {
 
     async getAccounts(type) {
         try {
-            await this.getOwners()
+            /*
+                All the test will go here
+                await this.getOwners()
+                this.deleteOwners('dfghfrjki756gh')
+            */
+
+            this.searchOwner('John')
+
             let accounts = []
             if (type == 'Savings' || type == 'Current') {
                 console.log('I am inside getAccounts trying to query the database', type);
@@ -134,6 +141,58 @@ export default class AccountsRepo {
     async getOwners() {
 
         try {
+            const owners = await prisma.owner.findMany()
+            console.log(owners);
+            return owners
+        } catch (error) {
+            console.log(error);
+            return { error: error.message }
+        }
+    }
+
+    async deleteOwners(ownerId) {
+        try {
+            const count = await prisma.owner.delete({
+                where: { id: ownerId }
+            })
+            console.log('deleted owner with ID ', ownerId);
+            return "deleted successfully"
+
+        } catch (error) {
+            console.log(error);
+            return { error: error.message }
+        }
+    }
+
+    async searchOwner(name) {
+
+        try {
+            const owner = await prisma.owner.findMany({
+                where: {
+                    OR: [
+                        {
+                            firstName: {
+                                contains: name
+                            }
+                        },
+                        {
+                            lastName: {
+                                contains: name
+                            }
+                        }
+                    ]
+                }
+            })
+            console.log(owner);
+            return owner
+        } catch (error) {
+            console.log(error);
+            return { error: error.message }
+        }
+    }
+
+    async getTrans(accountNo, fromDate, toDate) {
+        try {
 
         } catch (error) {
             console.log(error);
@@ -149,6 +208,7 @@ export default class AccountsRepo {
             return { error: error.message }
         }
     }
+
     async getTransSum(accountNo, fromDate, toDate) {
         try {
 

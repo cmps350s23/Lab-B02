@@ -25,7 +25,7 @@ export default function AccountsTable({ initialAccounts }) {
     }
     return (
         <div>
-            {console.log(accounts)}
+            {/* {console.log(accounts)} */}
             <label htmlFor="acctType"> Account Type</label>
             <Link href="/accounts/edit" className={styles.addAccount}>Add Account</Link>
             <select id="acctType" className="dropdown" onChange={e => handleTypeChange(e.target.value)}>
