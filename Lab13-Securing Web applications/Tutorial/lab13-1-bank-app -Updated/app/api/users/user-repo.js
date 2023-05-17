@@ -1,12 +1,12 @@
 import prisma from "@/app/libs/prisma";
-import { hash, compare, genSalt } from "bcrypt"
+import { hash, compare } from "bcrypt"
 
 export const createUser = async (user) => {
     try {
         // before adding the user we need to hash the password
         // add the bcrypt hash here
 
-        user.password = hash(user.password, 10)
+        user.password = await hash(user.password, 10)
 
         const newUser = await prisma.user.create({
             data: user
@@ -15,6 +15,7 @@ export const createUser = async (user) => {
         delete newUser.password
         return newUser
     } catch (error) {
+        console.log(error);
         return { error: error.message }
     }
 }
@@ -28,7 +29,9 @@ export const getUser = async (email, password) => {
 
         //add the bcrypt compare here
 
-        if (user.password !== password) return { error: "Invalid password" }
+        const isMatch = compare(user.password, password)
+
+        if (!isMatch) return { error: "Invalid password" }
 
         // delete the password from the user object before returning it
 
