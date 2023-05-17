@@ -9,7 +9,7 @@ export async function POST(request) {
         return Response.json(response, { status: 401 })
 
     // Generate JWT token and add it to the response
-    response.id_token = sign(response, process.env.JWT_SECRET_KEY, { expiresIn: '1h' })
+    // response.id_token = sign(response, process.env.JWT_SECRET_KEY, { expiresIn: '1h' })
 
     return Response.json(response, { status: 200 })
 }
