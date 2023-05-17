@@ -12,6 +12,9 @@ export default function Login(params) {
         const password = event.currentTarget.password.value
 
         // call teh signIn function here and pass the email and password and redirect to home page
+        await signIn('credentials', {
+            email, password, callbackUrl: '/', redirect: true
+        })
     }
     return (
 

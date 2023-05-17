@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
+import SignInOut from './SignInOut'
 
 export default function NavBar() {
 
@@ -19,7 +20,7 @@ export default function NavBar() {
                         <li className='nav-item'><Link href="/accounts/trans" className='nav-link'>Add Transaction</Link></li>
                         <li className='nav-item'><Link href="/accounts/report" className='nav-link'>Summary Reports</Link></li>
                     </ul>
-
+                    <SignInOut />
                 </div>
             </nav>
         </>)
