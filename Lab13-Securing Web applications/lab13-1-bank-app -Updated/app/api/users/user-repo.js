@@ -24,9 +24,8 @@ export const getUser = async (email, password) => {
         if (!user) return { error: "User does not exist" }
 
         //add the bcrypt compare here
-        const isMath = await compare(password, user.password)
 
-        if (!isMath) return { error: "Password is incorrect" }
+        if (user.password !== password) return { error: "Invalid password" }
 
         // delete the password from the user object before returning it
 

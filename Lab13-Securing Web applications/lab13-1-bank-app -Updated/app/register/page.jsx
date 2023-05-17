@@ -1,12 +1,12 @@
 'use client'
+import { useRouter } from 'next/navigation'
 import styles from './page.module.css'
-import { registerUser } from '../actions/users'
 
 export default function Register() {
 
     // const handleSubmit = async (formData) => registerUser(formData)
 
-
+    const router = useRouter()
     async function handleSubmit(event) {
 
 
@@ -21,7 +21,7 @@ export default function Register() {
         console.log('email: ', user.email);
         console.log('password: ', user.password);
 
-        const response = await fetch('/api/user', {
+        const response = await fetch('/api/users', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(user)
@@ -41,7 +41,7 @@ export default function Register() {
         <div className={styles.container}>
             <h2 className={styles.registerTitle}>Register</h2>
 
-            <form className={styles.registerForm} action={handleSubmit}>
+            <form className={styles.registerForm} onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="name">Name </label>
                     <input

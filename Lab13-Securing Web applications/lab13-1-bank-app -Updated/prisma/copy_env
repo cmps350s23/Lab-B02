@@ -15,8 +15,8 @@ NEXTAUTH_SECRET=ASFLKJASDLKFJLASKJDFLKJASD
 
 # The secret used to sign the JWTs issued to clients.
 # [you can use any random string here]
-SECRET_KEY=jkhjkhkjhkjhkjhkjhkjhkjh
+JWT_SECRET_KEY=ASFLKJASDLKFJLASKJDFLKJASD@s
 
-
-
-
+# The secret used to sign refresh tokens for GITHUB.
+GITHUB_ID=
+GITHUB_SECRET=
