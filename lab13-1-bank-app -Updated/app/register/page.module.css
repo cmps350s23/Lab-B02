@@ -1,0 +1,83 @@
+.container {
+    width: 600px;
+    margin: 5rem auto;
+    padding: 36px 48px 48px 48px;
+    background-color: #e2c0b5;
+    color: rgb(8, 6, 6);
+    border-radius: 11px;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+}
+
+.registerTitle {
+    padding: 15px;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.registerForm {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+}
+
+.registerForm label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.registerForm input {
+    width: 100%;
+    padding: 1.2rem;
+    border-radius: 9px;
+    border: none;
+}
+
+.registerForm input:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(253, 242, 233, 0.5);
+}
+
+.btnForm {
+    background-color: #f48982;
+    color: #fdf2e9;
+    align-self: end;
+    padding: 8px;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 9px;
+    border: none;
+
+    cursor: pointer;
+    font-family: inherit;
+
+    transition: all 0.3s;
+}
+
+.registerForm button {
+    margin-top: 1rem auto;
+    justify-self: center;
+    width: 100%;
+    background-color: #664f4f;
+    border: none;
+    height: 50px;
+    color: white;
+    font-weight: 600;
+    border-radius: 5%;
+}
+
+.registerForm button:hover {
+    background-color: #4a2508;
+    color: #f48982;
+}
+
+.btnForm:hover {
+    background-color: #fdf2e9;
+}
