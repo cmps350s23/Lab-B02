@@ -26,9 +26,7 @@
 
                         <i className="fas fa-trash"> Delete </i>
                     </button>
-                    <Link href={`/teams/${team.id}/players`} className={styles.btnPrimary}>
-                        <i className="fas fa-book"> Add Player </i>
-                    </Link>
+
                 </div>
             </div>
         </div >
@@ -53,6 +51,10 @@
             <h2>NAME</h2>
             <h4>NATIONALITY</h4>
         </div>
+
+        <Link href={`/teams/${team.id}/players`} className={styles.btnPrimary}>
+            <i className="fas fa-book"> Update Player </i>
+        </Link>
     </div >
 
     {/* 5. Design of the PlayerForm */}
