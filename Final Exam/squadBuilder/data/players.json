@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "name": "Pierre-Emerick Aubameyang",
+        "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/1_Pierre-Emerick_Aubameyang_%28cropped%29.jpg/220px-1_Pierre-Emerick_Aubameyang_%28cropped%29.jpg",
+        "position": "Striker",
+        "nationality": "Gabon",
+        "teamId": 1
+    },
+    {
+        "id": 2,
+        "name": "David de Gea",
+        "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/David_de_Gea_2017.jpg/220px-David_de_Gea_2017.jpg",
+        "position": "Goalkeeper",
+        "nationality": "Spain",
+        "teamId": 2
+    },
+    {
+        "id": 3,
+        "name": "N'Golo Kanté",
+        "picture": "https://upload.wikimedia.org/wikipedia/commons/c/c8/N%27Golo_Kanté_%28cropped_2%29.jpg",
+        "position": "Midfielder",
+        "nationality": "France",
+        "teamId": 3
+    },
+    {
+        "id": 4,
+        "name": "Mohamed Salah",
+        "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Mohamed_Salah_2018.jpg/220px-Mohamed_Salah_2018.jpg",
+        "position": "Winger",
+        "nationality": "Egypt",
+        "teamId": 4
+    },
+    {
+        "id": 5,
+        "name": "Kevin De Bruyne",
+        "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Kevin_De_Bruyne_201807091.jpg/220px-Kevin_De_Bruyne_201807091.jpg",
+        "position": "Midfielder",
+        "nationality": "Belgium",
+        "teamId": 5
+    },
+    {
+        "id": 6,
+        "name": "Bukayo Saka",
+        "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Bukayo_Saka.jpg/220px-Bukayo_Saka.jpg",
+        "position": "Winger",
+        "nationality": "England",
+        "teamId": 1
+    },
+    {
+        "id": 7,
+        "name": "Dean Henderson",
+        "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/DeanHenderson2018.jpg/220px-DeanHenderson2018.jpg",
+        "position": "Goalkeeper",
+        "nationality": "England",
+        "teamId": 2
+    },
+    {
+        "id": 8,
+        "name": "Mason Mount",
+        "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Mountbrightonoct3_2019_%28cropped%29.jpg/220px-Mountbrightonoct3_2019_%28cropped%29.jpg",
+        "position": "Midfielder",
+        "nationality": "England",
+        "teamId": 3
+    }
+]

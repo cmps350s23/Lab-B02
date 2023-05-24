@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Arsenal",
+        "logo": "https://logos-world.net/wp-content/uploads/2020/05/Arsenal-Logo.png",
+        "establishedYear": 1886,
+        "city": "London"
+    },
+    {
+        "id": 2,
+        "name": "Manchester United",
+        "logo": "https://logos-world.net/wp-content/uploads/2020/06/Manchester-United-logo.png",
+        "establishedYear": 1878,
+        "city": "Manchester"
+    },
+    {
+        "id": 3,
+        "name": "Chelsea",
+        "logo": "https://logos-world.net/wp-content/uploads/2020/05/Chelsea-Logo-700x394.png",
+        "establishedYear": 1905,
+        "city": "London"
+    },
+    {
+        "id": 4,
+        "name": "Liverpool",
+        "logo": "https://logos-world.net/wp-content/uploads/2020/06/Liverpool-Logo-700x394.png",
+        "establishedYear": 1892,
+        "city": "Liverpool"
+    },
+    {
+        "id": 5,
+        "name": "Manchester City",
+        "logo": "https://logos-world.net/wp-content/uploads/2020/06/Manchester-City-Logo-700x394.png",
+        "establishedYear": 1880,
+        "city": "Manchester"
+    }
+]
